@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Izinkan akses langsung ke folder harviacode
+RewriteCond %{REQUEST_URI} ^/harviacode/.*$
+RewriteRule ^(.*)$ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php [QSA,L]
