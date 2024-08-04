@@ -9,6 +9,10 @@
 				<table class='table table-bordered'>
 	
 					<tr>
+						<td width='200'>Sertifikat <?php echo form_error('sertifikat') ?></td><td><input type="text" class="form-control" name="sertifikat" id="sertifikat" placeholder="Sertifikat" value="<?php echo $sertifikat; ?>" /></td>
+					</tr>
+	
+					<tr>
 						<td></td>
 						<td>
 							<input type="hidden" name="no" value="<?php echo $no; ?>" /> 

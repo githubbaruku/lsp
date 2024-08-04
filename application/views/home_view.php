@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <!-- Required meta tags -->
@@ -37,13 +37,33 @@
                 opacity: 1;
             }
         }
+
+        .header-title {
+            font-size: 5rem;
+            justify-content: left;
+        }
+
+        .header-description {
+            color: yellow;
+            font-size: 2rem;
+        }
+
+        .bg-custom {
+            background-color: rgb(102, 0, 0);
+            min-height: 35rem;
+        }
+
+        .image-overlay-text {
+            left: 25rem;
+            font-family: 'Google Sans';
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">LSP XYZ</a>
+            <a class="navbar-brand" href="<?= base_url(); ?>"><img src="<?= base_url('assets/img/logo.png'); ?>" alt="logo" width="50%"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,7 +76,7 @@
                             Layanan Skema Sertifikasi
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Tentang Kami</a>
+                            <a class="dropdown-item" href="#">submenu</a>
                             <a class="dropdown-item" href="#">Prosedur</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Peta Okupasi</a>
@@ -67,7 +87,7 @@
                             Profile
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Galery</a>
+                            <a class="dropdown-item" href="<?= base_url('about'); ?>">Tentang Kami</a>
                             <a class="dropdown-item" href="#">Hubungi Kami</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Download</a>
@@ -82,11 +102,14 @@
         </nav>
     </div>
 
-    <div class="image-overlay-container">
-        <img src="<?= base_url('assets/img/header.jpg'); ?>" class="img-fluid rounded" alt="Header Image">
-        <div class="image-overlay-text">
-            <h1>Sertifikasi itu penting. Kompeten itu membanggakan.</h1>
-            <p>LSP XYZ</p>
+    <div class="image-overlay-container ">
+        <div class="container-fluid bg-custom text-left">
+            <div class="image-overlay-text">
+                <h1 class="header-title text-left">LEMBAGA
+                    <br>SERTIFIKASI <br>PROFESI
+                </h1>
+                <h5 class="header-description text-left">DAARUL QUR'AN</h5>
+            </div>
         </div>
     </div>
 
@@ -94,37 +117,50 @@
         <div class="col-lg-4">
             <div class="container">
                 <h1 class="p-3">Tentang Kami</h1>
-                <p class="p-3 text-justify">Lembaga Sertifikasi Profesi XYZ adalah badan resmi yang berkomitmen untuk meningkatkan kualitas dan profesionalisme tenaga kerja di berbagai bidang industri. Kami didirikan dengan tujuan untuk menyediakan sertifikasi kompetensi yang diakui secara nasional dan internasional, sebagai bentuk pengakuan terhadap kemampuan dan keahlian individu dalam suatu profesi.
+                <h3 class="p-3">DASAR PEMIKIRAN</h3>
+                <p class="p-3 text-justify">
+                    Salah satu hadis popular yang
+                    diriwayatkan oleh Sayyidah Aisyah
+                    radhiyallahu ‘anha, yakni hadis yang berbunyi:
+
+                <p class="text-right">
+                    ان الله تعالى يحب اذا عمل احدكم عملا ان يتقنه
+
+                </p>
+                Hadis ini dapat dijumpai di beberapa
+                kitab hadis, salah satunya Al-Tanwir
+                Syarah Al-Jami’u As-Shaghir. <a href="<?= base_url('about'); ?>">read more >>></a>
 
                 </p>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="container">
-                <img class="img-fluid mt-5" src="<?= base_url('assets/img/about1.jpg'); ?>" alt="">
+                <img class="img-fluid mt-5" src="<?= base_url('assets/img/about_us1.jpg'); ?>" alt="">
             </div>
         </div>
         <div class="col-lg-4">
             <div class="container">
-                <img class="img-fluid mt-5" src="<?= base_url('assets/img/about2.jpg'); ?>" alt="">
+                <img class="img-fluid mt-5" src="<?= base_url('assets/img/about_us2.jpg'); ?>" alt="">
             </div>
         </div>
         <div class="container my-5">
             <div class="row">
                 <div class="col">
-                    <h2 class="text-center">Skema Okupasi</h2>
-                    <p class="text-center">Berikut adalah daftar skema okupasi yang tersedia.</p>
+                    <h2 class="text-center">Skema</h2>
+                    <p class="text-center">Berikut adalah daftar skema yang tersedia.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="<?= base_url('assets/img/webpro.jpg'); ?>" class="card-img-top" alt="Skema 1">
+                        <img src="<?= base_url('assets/img/1 Tahsin Muda.png'); ?>" class="card-img-top" alt="Skema 1">
                         <div class="card-body">
-                            <h5 class="card-title">Web Programmer</h5>
-                            <p class="card-text">Mengembangkan dan memelihara aplikasi web menggunakan teknologi modern.</p>
+                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
+                                Tahsin Al-Qur’an Mubtadi (Muda)</h5>
+                            <!-- <p class="card-text"></p>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#webProgrammerModal">
-                                Selengkapnya</button>
+                                Selengkapnya</button> -->
                         </div>
                     </div>
                 </div>
@@ -172,12 +208,14 @@
 
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="<?= base_url('assets/img/mobpro.jpg'); ?>" class="card-img-top" alt="Skema 2">
+                        <img src="<?= base_url('assets/img/2 Tahsin Madya.png'); ?>" class="card-img-top" alt="Skema 2">
                         <div class="card-body">
-                            <h5 class="card-title">Mobile Programmer</h5>
-                            <p class="card-text">Mengembangkan dan memelihara aplikasi mobile untuk berbagai platform.</p>
+                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
+                                Tahsin Al-Qur’an Mutawassit
+                                (Madya)</h5>
+                            <!-- <p class="card-text">Mengembangkan dan memelihara aplikasi mobile untuk berbagai platform.</p>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mobileProgrammerModal">
-                                Selengkapnya</button>
+                                Selengkapnya</button> -->
                         </div>
                     </div>
                 </div>
@@ -224,13 +262,177 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="<?= base_url('assets/img/digart.jpg'); ?>" class="card-img-top" alt="Skema 3">
+                        <img src="<?= base_url('assets/img/3 Tahsin Mahir.png'); ?>" class="card-img-top" alt="Skema 3">
                         <div class="card-body">
-                            <h5 class="card-title">Design Grafis</h5>
-                            <p class="card-text">Membuat dan mengatur elemen visual untuk komunikasi efektif.</p>
+                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
+                                Tahsin Al-Qur’an Mahir (Ahli)</h5>
+                            <!-- <p class="card-text">Membuat dan mengatur elemen visual untuk komunikasi efektif.</p>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#designGrafisModal">
                                 Design Grafis
-                            </button>
+                            </button> -->
+                            <!-- Modal for Design Grafis -->
+                            <div class="modal fade" id="designGrafisModal" tabindex="-1" role="dialog" aria-labelledby="designGrafisModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="designGrafisModalLabel">Detail Skema Design Grafis</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><strong>Design Grafis</strong>: Membuat dan mengatur elemen visual untuk komunikasi efektif.</p>
+                                            <h6>Kompetensi Utama:</h6>
+                                            <ul>
+                                                <li>Pemahaman Prinsip Desain</li>
+                                                <li>Penggunaan Software Desain (Photoshop, Illustrator, dll.)</li>
+                                                <li>Pembuatan Materi Visual untuk Berbagai Media</li>
+                                                <li>Kolaborasi dengan Klien dan Tim Kreatif</li>
+                                            </ul>
+                                            <h6>Kualifikasi:</h6>
+                                            <ul>
+                                                <li>Pendidikan minimum D3 atau setara dalam bidang desain grafis atau seni rupa.</li>
+                                                <li>Pengalaman dalam desain grafis minimal 1 tahun.</li>
+                                                <li>Kreativitas dan kemampuan komunikasi visual yang kuat.</li>
+                                            </ul>
+                                            <h6>Peluang Karir:</h6>
+                                            <ul>
+                                                <li>Desainer Grafis Junior</li>
+                                                <li>Desainer Grafis Senior</li>
+                                                <li>Direktur Kreatif</li>
+                                                <li>Manajer Proyek Desain</li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                            <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="<?= base_url('assets/img/4 Tahfizh Muda.png'); ?>" class="card-img-top" alt="Skema 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
+                                Tahfizh Al-Qur’an Mubtadi (Muda)</h5>
+                            <!-- <p class="card-text"></p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#webProgrammerModal">
+                                Selengkapnya</button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="webProgrammerModal" tabindex="-1" role="dialog" aria-labelledby="webProgrammerModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="webProgrammerModalLabel">Skema Web Programmer</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>Deskripsi:</h6>
+                                <p>Web Programmer bertanggung jawab mengembangkan dan memelihara aplikasi web menggunakan teknologi modern.</p>
+                                <h6>Kompetensi Utama:</h6>
+                                <ul>
+                                    <li>Pengembangan Front-End: HTML, CSS, JavaScript</li>
+                                    <li>Pengembangan Back-End: PHP, Python, Node.js</li>
+                                    <li>Pengujian dan Debugging</li>
+                                    <li>Pemeliharaan Situs Web</li>
+                                    <li>Kolaborasi Tim</li>
+                                </ul>
+                                <h6>Kualifikasi:</h6>
+                                <p>Pendidikan minimum D3 atau setara, pengalaman minimal 1 tahun dalam pengembangan web.</p>
+                                <h6>Peluang Karir:</h6>
+                                <ul>
+                                    <li>Pengembang Web Junior</li>
+                                    <li>Pengembang Web Senior</li>
+                                    <li>Arsitek Web</li>
+                                    <li>Manajer Proyek IT</li>
+
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="<?= base_url('assets/img/5 Tahfizh Madya.png'); ?>" class="card-img-top" alt="Skema 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
+                                Tahfizh Al-Qur’an Mutawassit
+                                (Madya)</h5>
+                            <!-- <p class="card-text">Mengembangkan dan memelihara aplikasi mobile untuk berbagai platform.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mobileProgrammerModal">
+                                Selengkapnya</button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="mobileProgrammerModal" tabindex="-1" role="dialog" aria-labelledby="mobileProgrammerModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="mobileProgrammerModalLabel">Detail Skema Mobile Programmer</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p><strong>Mobile Programmer</strong>: Mengembangkan dan memelihara aplikasi mobile untuk berbagai platform.</p>
+                                <h6>Kompetensi Utama:</h6>
+                                <ul>
+                                    <li>Pengembangan Aplikasi Android dan iOS</li>
+                                    <li>Pengujian dan Debugging</li>
+                                    <li>Pemeliharaan dan Update Aplikasi</li>
+                                    <li>Kolaborasi dengan Desainer dan Pengembang Lain</li>
+                                </ul>
+                                <h6>Kualifikasi:</h6>
+                                <ul>
+                                    <li>Pendidikan minimum D3 atau setara dalam bidang teknologi informasi atau ilmu komputer.</li>
+                                    <li>Pengalaman dalam pengembangan mobile minimal 1 tahun.</li>
+                                    <li>Kemampuan dalam menggunakan berbagai alat dan teknologi mobile.</li>
+                                </ul>
+                                <h6>Peluang Karir:</h6>
+                                <ul>
+                                    <li>Pengembang Mobile Junior</li>
+                                    <li>Pengembang Mobile Senior</li>
+                                    <li>Arsitek Aplikasi Mobile</li>
+                                    <li>Manajer Proyek IT</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="<?= base_url('assets/img/6 Tahfizh Mahir.png'); ?>" class="card-img-top" alt="Skema 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
+                                Tahfizh Al-Qur’an Mahir (Ahli)</h5>
+                            <!-- <p class="card-text">Membuat dan mengatur elemen visual untuk komunikasi efektif.</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#designGrafisModal">
+                                Design Grafis
+                            </button> -->
                             <!-- Modal for Design Grafis -->
                             <div class="modal fade" id="designGrafisModal" tabindex="-1" role="dialog" aria-labelledby="designGrafisModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">

@@ -5,17 +5,17 @@
                 <div class="box box-warning box-solid">
     
                     <div class="box-header">
-                        <h3 class="box-title">KELOLA DATA TBL_SERTIFIKAT</h3>
+                        <h3 class="box-title">KELOLA DATA IMAGES</h3>
                     </div>
         
         <div class="box-body">
             <div class='row'>
             <div class='col-md-9'>
             <div style="padding-bottom: 10px;"'>
-        <?php echo anchor(site_url('sertifikat/create'), '<i class="fa fa-wpforms" aria-hidden="true"></i> Tambah Data', 'class="btn btn-danger btn-sm"'); ?></div>
+        <?php echo anchor(site_url('images/create'), '<i class="fa fa-wpforms" aria-hidden="true"></i> Tambah Data', 'class="btn btn-danger btn-sm"'); ?></div>
             </div>
             <div class='col-md-3'>
-            <form action="<?php echo site_url('sertifikat/index'); ?>" class="form-inline" method="get">
+            <form action="<?php echo site_url('images/index'); ?>" class="form-inline" method="get">
                     <div class="input-group">
                         <input type="text" class="form-control" name="q" value="<?php echo $q; ?>">
                         <span class="input-group-btn">
@@ -23,7 +23,7 @@
                                 if ($q <> '')
                                 {
                                     ?>
-                                    <a href="<?php echo site_url('sertifikat'); ?>" class="btn btn-default">Reset</a>
+                                    <a href="<?php echo site_url('images'); ?>" class="btn btn-default">Reset</a>
                                     <?php
                                 }
                             ?>
@@ -50,22 +50,24 @@
         <table class="table table-bordered" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>Sertifikat</th>
+		<th>Image Name</th>
+		<th>Image Path</th>
 		<th>Action</th>
             </tr><?php
-            foreach ($sertifikat_data as $sertifikat)
+            foreach ($images_data as $images)
             {
                 ?>
                 <tr>
 			<td width="10px"><?php echo ++$start ?></td>
-			<td><?php echo $sertifikat->sertifikat ?></td>
+			<td><?php echo $images->image_name ?></td>
+			<td><?php echo $images->image_path ?></td>
 			<td style="text-align:center" width="200px">
 				<?php 
-				echo anchor(site_url('sertifikat/read/'.$sertifikat->no),'<i class="fa fa-eye" aria-hidden="true"></i>','class="btn btn-danger btn-sm"'); 
+				echo anchor(site_url('images/read/'.$images->id),'<i class="fa fa-eye" aria-hidden="true"></i>','class="btn btn-danger btn-sm"'); 
 				echo '  '; 
-				echo anchor(site_url('sertifikat/update/'.$sertifikat->no),'<i class="fa fa-pencil-square-o" aria-hidden="true"></i>','class="btn btn-danger btn-sm"'); 
+				echo anchor(site_url('images/update/'.$images->id),'<i class="fa fa-pencil-square-o" aria-hidden="true"></i>','class="btn btn-danger btn-sm"'); 
 				echo '  '; 
-				echo anchor(site_url('sertifikat/delete/'.$sertifikat->no),'<i class="fa fa-trash-o" aria-hidden="true"></i>','class="btn btn-danger btn-sm" Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+				echo anchor(site_url('images/delete/'.$images->id),'<i class="fa fa-trash-o" aria-hidden="true"></i>','class="btn btn-danger btn-sm" Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 				?>
 			</td>
 		</tr>
