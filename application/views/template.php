@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>XYZ LSP</title>
+    <title> LSP DQ</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -32,6 +32,8 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -43,7 +45,7 @@
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>A</b>LT</span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>LSP </b>XYZ</span>
+                <span class="logo-lg"><b>LSP </b>Daarul Qur'an</span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top">
@@ -332,6 +334,8 @@
     <!-- Select2 -->
     <script src="<?php echo base_url() ?>assets/adminlte/bower_components/select2/dist/js/select2.full.min.js"></script>
     <!-- page script -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
     <script>
         $(function() {
             $('.select2').select2()
@@ -345,6 +349,12 @@
                 'autoWidth': false
             })
         })
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#deskripsi').summernote();
+        });
     </script>
 </body>
 

@@ -152,369 +152,99 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="<?= base_url('assets/img/1 Tahsin Muda.png'); ?>" class="card-img-top" alt="Skema 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
-                                Tahsin Al-Qur’an Mubtadi (Muda)</h5>
-                            <!-- <p class="card-text"></p>
+                <?php
+                foreach ($data as $skema) { ?>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="<?= $skema->gambar_skema; ?>" class="card-img-top" alt="Skema 1">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $skema->nama_skema; ?></h5>
+                                <!-- <p class="card-text"></p>
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#webProgrammerModal">
                                 Selengkapnya</button> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The Modal -->
-                <div class="modal fade" id="webProgrammerModal" tabindex="-1" role="dialog" aria-labelledby="webProgrammerModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="webProgrammerModalLabel">Skema Web Programmer</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <h6>Deskripsi:</h6>
-                                <p>Web Programmer bertanggung jawab mengembangkan dan memelihara aplikasi web menggunakan teknologi modern.</p>
-                                <h6>Kompetensi Utama:</h6>
-                                <ul>
-                                    <li>Pengembangan Front-End: HTML, CSS, JavaScript</li>
-                                    <li>Pengembangan Back-End: PHP, Python, Node.js</li>
-                                    <li>Pengujian dan Debugging</li>
-                                    <li>Pemeliharaan Situs Web</li>
-                                    <li>Kolaborasi Tim</li>
-                                </ul>
-                                <h6>Kualifikasi:</h6>
-                                <p>Pendidikan minimum D3 atau setara, pengalaman minimal 1 tahun dalam pengembangan web.</p>
-                                <h6>Peluang Karir:</h6>
-                                <ul>
-                                    <li>Pengembang Web Junior</li>
-                                    <li>Pengembang Web Senior</li>
-                                    <li>Arsitek Web</li>
-                                    <li>Manajer Proyek IT</li>
-
-                                </ul>
-                            </div>
-                            <div class="modal-footer">
-
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <!-- The Modal -->
+                    <div class="modal fade" id="webProgrammerModal" tabindex="-1" role="dialog" aria-labelledby="webProgrammerModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="webProgrammerModalLabel">Skema Web Programmer</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h6>Deskripsi:</h6>
+                                    <p>Web Programmer bertanggung jawab mengembangkan dan memelihara aplikasi web menggunakan teknologi modern.</p>
+                                    <h6>Kompetensi Utama:</h6>
+                                    <ul>
+                                        <li>Pengembangan Front-End: HTML, CSS, JavaScript</li>
+                                        <li>Pengembangan Back-End: PHP, Python, Node.js</li>
+                                        <li>Pengujian dan Debugging</li>
+                                        <li>Pemeliharaan Situs Web</li>
+                                        <li>Kolaborasi Tim</li>
+                                    </ul>
+                                    <h6>Kualifikasi:</h6>
+                                    <p>Pendidikan minimum D3 atau setara, pengalaman minimal 1 tahun dalam pengembangan web.</p>
+                                    <h6>Peluang Karir:</h6>
+                                    <ul>
+                                        <li>Pengembang Web Junior</li>
+                                        <li>Pengembang Web Senior</li>
+                                        <li>Arsitek Web</li>
+                                        <li>Manajer Proyek IT</li>
 
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="<?= base_url('assets/img/2 Tahsin Madya.png'); ?>" class="card-img-top" alt="Skema 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
-                                Tahsin Al-Qur’an Mutawassit
-                                (Madya)</h5>
-                            <!-- <p class="card-text">Mengembangkan dan memelihara aplikasi mobile untuk berbagai platform.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mobileProgrammerModal">
-                                Selengkapnya</button> -->
-                        </div>
-                    </div>
-                </div>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
 
-                <!-- Modal -->
-                <div class="modal fade" id="mobileProgrammerModal" tabindex="-1" role="dialog" aria-labelledby="mobileProgrammerModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="mobileProgrammerModalLabel">Detail Skema Mobile Programmer</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p><strong>Mobile Programmer</strong>: Mengembangkan dan memelihara aplikasi mobile untuk berbagai platform.</p>
-                                <h6>Kompetensi Utama:</h6>
-                                <ul>
-                                    <li>Pengembangan Aplikasi Android dan iOS</li>
-                                    <li>Pengujian dan Debugging</li>
-                                    <li>Pemeliharaan dan Update Aplikasi</li>
-                                    <li>Kolaborasi dengan Desainer dan Pengembang Lain</li>
-                                </ul>
-                                <h6>Kualifikasi:</h6>
-                                <ul>
-                                    <li>Pendidikan minimum D3 atau setara dalam bidang teknologi informasi atau ilmu komputer.</li>
-                                    <li>Pengalaman dalam pengembangan mobile minimal 1 tahun.</li>
-                                    <li>Kemampuan dalam menggunakan berbagai alat dan teknologi mobile.</li>
-                                </ul>
-                                <h6>Peluang Karir:</h6>
-                                <ul>
-                                    <li>Pengembang Mobile Junior</li>
-                                    <li>Pengembang Mobile Senior</li>
-                                    <li>Arsitek Aplikasi Mobile</li>
-                                    <li>Manajer Proyek IT</li>
-                                </ul>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="<?= base_url('assets/img/3 Tahsin Mahir.png'); ?>" class="card-img-top" alt="Skema 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
-                                Tahsin Al-Qur’an Mahir (Ahli)</h5>
-                            <!-- <p class="card-text">Membuat dan mengatur elemen visual untuk komunikasi efektif.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#designGrafisModal">
-                                Design Grafis
-                            </button> -->
-                            <!-- Modal for Design Grafis -->
-                            <div class="modal fade" id="designGrafisModal" tabindex="-1" role="dialog" aria-labelledby="designGrafisModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="designGrafisModalLabel">Detail Skema Design Grafis</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p><strong>Design Grafis</strong>: Membuat dan mengatur elemen visual untuk komunikasi efektif.</p>
-                                            <h6>Kompetensi Utama:</h6>
-                                            <ul>
-                                                <li>Pemahaman Prinsip Desain</li>
-                                                <li>Penggunaan Software Desain (Photoshop, Illustrator, dll.)</li>
-                                                <li>Pembuatan Materi Visual untuk Berbagai Media</li>
-                                                <li>Kolaborasi dengan Klien dan Tim Kreatif</li>
-                                            </ul>
-                                            <h6>Kualifikasi:</h6>
-                                            <ul>
-                                                <li>Pendidikan minimum D3 atau setara dalam bidang desain grafis atau seni rupa.</li>
-                                                <li>Pengalaman dalam desain grafis minimal 1 tahun.</li>
-                                                <li>Kreativitas dan kemampuan komunikasi visual yang kuat.</li>
-                                            </ul>
-                                            <h6>Peluang Karir:</h6>
-                                            <ul>
-                                                <li>Desainer Grafis Junior</li>
-                                                <li>Desainer Grafis Senior</li>
-                                                <li>Direktur Kreatif</li>
-                                                <li>Manajer Proyek Desain</li>
-                                            </ul>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                            <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
-                                        </div>
-                                    </div>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                    <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <?php } ?>
             </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="<?= base_url('assets/img/4 Tahfizh Muda.png'); ?>" class="card-img-top" alt="Skema 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
-                                Tahfizh Al-Qur’an Mubtadi (Muda)</h5>
-                            <!-- <p class="card-text"></p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#webProgrammerModal">
-                                Selengkapnya</button> -->
-                        </div>
-                    </div>
-                </div>
 
-                <!-- The Modal -->
-                <div class="modal fade" id="webProgrammerModal" tabindex="-1" role="dialog" aria-labelledby="webProgrammerModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="webProgrammerModalLabel">Skema Web Programmer</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <h6>Deskripsi:</h6>
-                                <p>Web Programmer bertanggung jawab mengembangkan dan memelihara aplikasi web menggunakan teknologi modern.</p>
-                                <h6>Kompetensi Utama:</h6>
-                                <ul>
-                                    <li>Pengembangan Front-End: HTML, CSS, JavaScript</li>
-                                    <li>Pengembangan Back-End: PHP, Python, Node.js</li>
-                                    <li>Pengujian dan Debugging</li>
-                                    <li>Pemeliharaan Situs Web</li>
-                                    <li>Kolaborasi Tim</li>
-                                </ul>
-                                <h6>Kualifikasi:</h6>
-                                <p>Pendidikan minimum D3 atau setara, pengalaman minimal 1 tahun dalam pengembangan web.</p>
-                                <h6>Peluang Karir:</h6>
-                                <ul>
-                                    <li>Pengembang Web Junior</li>
-                                    <li>Pengembang Web Senior</li>
-                                    <li>Arsitek Web</li>
-                                    <li>Manajer Proyek IT</li>
-
-                                </ul>
-                            </div>
-                            <div class="modal-footer">
-
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="<?= base_url('assets/img/5 Tahfizh Madya.png'); ?>" class="card-img-top" alt="Skema 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
-                                Tahfizh Al-Qur’an Mutawassit
-                                (Madya)</h5>
-                            <!-- <p class="card-text">Mengembangkan dan memelihara aplikasi mobile untuk berbagai platform.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mobileProgrammerModal">
-                                Selengkapnya</button> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" id="mobileProgrammerModal" tabindex="-1" role="dialog" aria-labelledby="mobileProgrammerModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="mobileProgrammerModalLabel">Detail Skema Mobile Programmer</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p><strong>Mobile Programmer</strong>: Mengembangkan dan memelihara aplikasi mobile untuk berbagai platform.</p>
-                                <h6>Kompetensi Utama:</h6>
-                                <ul>
-                                    <li>Pengembangan Aplikasi Android dan iOS</li>
-                                    <li>Pengujian dan Debugging</li>
-                                    <li>Pemeliharaan dan Update Aplikasi</li>
-                                    <li>Kolaborasi dengan Desainer dan Pengembang Lain</li>
-                                </ul>
-                                <h6>Kualifikasi:</h6>
-                                <ul>
-                                    <li>Pendidikan minimum D3 atau setara dalam bidang teknologi informasi atau ilmu komputer.</li>
-                                    <li>Pengalaman dalam pengembangan mobile minimal 1 tahun.</li>
-                                    <li>Kemampuan dalam menggunakan berbagai alat dan teknologi mobile.</li>
-                                </ul>
-                                <h6>Peluang Karir:</h6>
-                                <ul>
-                                    <li>Pengembang Mobile Junior</li>
-                                    <li>Pengembang Mobile Senior</li>
-                                    <li>Arsitek Aplikasi Mobile</li>
-                                    <li>Manajer Proyek IT</li>
-                                </ul>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="<?= base_url('assets/img/6 Tahfizh Mahir.png'); ?>" class="card-img-top" alt="Skema 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Skema Sertifikasi Profesi Guru
-                                Tahfizh Al-Qur’an Mahir (Ahli)</h5>
-                            <!-- <p class="card-text">Membuat dan mengatur elemen visual untuk komunikasi efektif.</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#designGrafisModal">
-                                Design Grafis
-                            </button> -->
-                            <!-- Modal for Design Grafis -->
-                            <div class="modal fade" id="designGrafisModal" tabindex="-1" role="dialog" aria-labelledby="designGrafisModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="designGrafisModalLabel">Detail Skema Design Grafis</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p><strong>Design Grafis</strong>: Membuat dan mengatur elemen visual untuk komunikasi efektif.</p>
-                                            <h6>Kompetensi Utama:</h6>
-                                            <ul>
-                                                <li>Pemahaman Prinsip Desain</li>
-                                                <li>Penggunaan Software Desain (Photoshop, Illustrator, dll.)</li>
-                                                <li>Pembuatan Materi Visual untuk Berbagai Media</li>
-                                                <li>Kolaborasi dengan Klien dan Tim Kreatif</li>
-                                            </ul>
-                                            <h6>Kualifikasi:</h6>
-                                            <ul>
-                                                <li>Pendidikan minimum D3 atau setara dalam bidang desain grafis atau seni rupa.</li>
-                                                <li>Pengalaman dalam desain grafis minimal 1 tahun.</li>
-                                                <li>Kreativitas dan kemampuan komunikasi visual yang kuat.</li>
-                                            </ul>
-                                            <h6>Peluang Karir:</h6>
-                                            <ul>
-                                                <li>Desainer Grafis Junior</li>
-                                                <li>Desainer Grafis Senior</li>
-                                                <li>Direktur Kreatif</li>
-                                                <li>Manajer Proyek Desain</li>
-                                            </ul>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                                            <a href="<?= base_url('auth/registration'); ?>"><button type="button" class="btn btn-success">Daftar</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-        <!-- Optional JavaScript; choose one of the two! -->
+            <!-- Optional JavaScript; choose one of the two! -->
 
-        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+            <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     -->
-        <script src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
-        <!-- Bootstrap core JavaScript-->
-        <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
-        <script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="<?= base_url('assets/js/bootstrap.min.js'); ?>"></script>
+            <!-- Bootstrap core JavaScript-->
+            <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
+            <script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="<?= base_url('assets/'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="<?= base_url('assets/'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="<?= base_url('assets/'); ?>js/sb-admin-2.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="<?= base_url('assets/'); ?>js/sb-admin-2.min.js"></script>
 
-        <!-- datepicker -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script>
-            $('#datepicker').datepicker({
-                uiLibrary: 'bootstrap4'
-            });
-        </script>
-        <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+            <!-- datepicker -->
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script>
+                $('#datepicker').datepicker({
+                    uiLibrary: 'bootstrap4'
+                });
+            </script>
+            <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
 </body>
 
 </html>

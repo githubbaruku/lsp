@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>XYZ LSP</title>
+    <title>LSP Daarul Qur'an</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -34,7 +34,7 @@
         <?= $this->session->flashdata('message'); ?>
 
         <div class="login-logo">
-            <a href="<?php echo base_url(); ?>"><b> XYZ </b>Lembaga Sertifikasi Profesi </a>
+            <a href="<?php echo base_url(); ?>"><b> LSP </b>DAARUL QUR'AN </a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
