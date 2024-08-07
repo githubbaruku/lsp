@@ -14,11 +14,12 @@ class Form extends CI_Controller
 
     public function index()
     {
-        $this->load->view('form_success');
+        $this->load->view('form_apl01');
     }
 
     public function submit_form()
     {
+
         // Set validation rules
         $this->form_validation->set_rules('skema', 'Skema', 'required');
         $this->form_validation->set_rules('tuk', 'TUK', 'required');
@@ -31,6 +32,7 @@ class Form extends CI_Controller
             $config['upload_path'] = './uploads/';
             $config['allowed_types'] = 'gif|jpg|png';
             $config['max_size'] = 2048;
+            $config['encrypt_name'] = TRUE;
 
             $this->load->library('upload', $config);
 
@@ -74,8 +76,17 @@ class Form extends CI_Controller
                 'tanda_tangan' => $this->input->post('tanda_tangan')
             );
 
-            $this->Form_model->insert_form($data);
-            $this->load->view('form_success');
+            //  var_dump($data);
+            // exit;
+
+            $simpan =  $this->Form_model->insert_form($data);
+            if ($simpan) {
+                echo 'berhasil';
+                $this->session->set_flashdata('pesan', 'Form APL 01 berhasil disimpan');
+            } else {
+                $this->session->set_flashdata('pesan', 'Form APL 01 gagal disimpan');
+            }
+            return redirect('form_apl01');
         }
     }
 }

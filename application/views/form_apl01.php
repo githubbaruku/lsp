@@ -6,13 +6,18 @@
         <p>Untuk Bisa Mengikuti Uji Kompetensi Silahkan Lengkapi Persyaratan dan Dokumen Berikut Ini:
         </p>
         <div class="container">
+            <?php
+            if ($this->session->flashdata('pesan')) {
+                echo $this->session->flashdata;
+            }
+            ?>
             <h2>
                 FR-APL-01. Formulir Permohonan Sertifikasi Kompetensi
             </h2>
             <h4>Bagian 1: Rincian Data Pemohon Sertifikasi
             </h4>
 
-            <form action="<?= base_url('form'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('form/submit_form'); ?>" method="post" enctype="multipart/form-data">
                 <!-- Skema -->
                 <div class="form-group">
                     <label for="skema">Skema*</label>
