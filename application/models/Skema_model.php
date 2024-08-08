@@ -8,7 +8,7 @@ class Skema_model extends CI_Model
 
     public $table = 'tbl_skema';
     public $id = 'id_skema';
-    public $order = 'DESC';
+    public $order = 'ASC';
 
     function __construct()
     {
@@ -18,7 +18,7 @@ class Skema_model extends CI_Model
     // get all
     function get_all()
     {
-        $this->db->order_by($this->id, $this->order);
+        $this->db->order_by($this->id, $this->order, 'ASC');
         return $this->db->get($this->table)->result();
     }
 

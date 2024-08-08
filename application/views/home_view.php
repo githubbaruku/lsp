@@ -154,10 +154,9 @@
             <div class="row">
                 <?php
                 foreach ($data as $skema) { ?>
-
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img src="<?= $skema->gambar_skema; ?>" class="card-img-top" alt="Skema 1">
+                            <img src="<?= $skema->gambar_skema; ?>" class="card-img-top" alt="Skema">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $skema->nama_skema; ?></h5>
                                 <!-- <p class="card-text"></p>
