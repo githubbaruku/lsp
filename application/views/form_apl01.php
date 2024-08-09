@@ -11,6 +11,14 @@
                 echo $this->session->flashdata;
             }
             ?>
+
+            <?php if ($this->session->flashdata('pesan')): ?>
+                <div class="alert alert-success">
+                    <?php echo $this->session->flashdata('pesan'); ?>
+                </div>
+            <?php endif; ?>
+
+
             <h2>
                 FR-APL-01. Formulir Permohonan Sertifikasi Kompetensi
             </h2>

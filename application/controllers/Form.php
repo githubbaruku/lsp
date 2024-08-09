@@ -19,14 +19,13 @@ class Form extends CI_Controller
 
     public function submit_form()
     {
-
         // Set validation rules
         $this->form_validation->set_rules('skema', 'Skema', 'required');
         $this->form_validation->set_rules('tuk', 'TUK', 'required');
         // Add more rules as needed
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('form_apl01');
+            $this->template->load('template', 'jadwal/tbl_jadwal_list');
         } else {
             // Configure upload
             $config['upload_path'] = './uploads/';
@@ -43,7 +42,9 @@ class Form extends CI_Controller
                 if ($this->upload->do_upload($file)) {
                     $uploaded_files[$file] = $this->upload->data('file_name');
                 } else {
-                    $this->load->view('form_view', array('error' => $this->upload->display_errors()));
+                    // Handle error jika file gagal diupload, misal menggunakan flash message atau redirect
+                    $this->session->set_flashdata('error', $this->upload->display_errors());
+                    redirect('form');
                     return;
                 }
             }
@@ -68,19 +69,15 @@ class Form extends CI_Controller
                 'jabatan' => $this->input->post('jabatan'),
                 'alamat_perusahaan' => $this->input->post('alamat_perusahaan'),
                 'no_telepon_email' => $this->input->post('no_telepon_email'),
-                'fotokopi_ktp' => $uploaded_files['fotokopi_ktp'],
-                'pas_foto' => $uploaded_files['pas_foto'],
-                'sertifikat_pelatihan' => $uploaded_files['sertifikat_pelatihan'],
-                'fotokopi_ijazah' => $uploaded_files['fotokopi_ijazah'],
+                'fotokopi_ktp' => isset($uploaded_files['fotokopi_ktp']) ? $uploaded_files['fotokopi_ktp'] : null,
+                'pas_foto' => isset($uploaded_files['pas_foto']) ? $uploaded_files['pas_foto'] : null,
+                'sertifikat_pelatihan' => isset($uploaded_files['sertifikat_pelatihan']) ? $uploaded_files['sertifikat_pelatihan'] : null,
+                'fotokopi_ijazah' => isset($uploaded_files['fotokopi_ijazah']) ? $uploaded_files['fotokopi_ijazah'] : null,
                 'tanggal' => $this->input->post('tanggal'),
             );
 
-            //  var_dump($data);
-            // exit;
-
             $simpan =  $this->Form_model->insert_form($data);
             if ($simpan) {
-                echo 'berhasil';
                 $this->session->set_flashdata('pesan', 'Form APL 01 berhasil disimpan');
             } else {
                 $this->session->set_flashdata('pesan', 'Form APL 01 gagal disimpan');

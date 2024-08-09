@@ -5,12 +5,13 @@
                 <div class="box box-warning box-solid">
 
                     <div class="box-header">
-                        <h3 class="box-title">Jadwal Sertifikasi LSP
-                        </h3>
-                        <h5>Silahkan Ikuti Jadwal Uji Sertifikasi Sesuai Dengan Jadwal yang sudah Di Tentukan
-                        </h5>
+                        <h3 class="box-title">JADWAL SERTIFIKASI LSP</h3>
                     </div>
-
+                    <h5 class="container">Silahkan Ikuti Jadwal Uji Sertifikasi Sesuai Dengan Jadwal yang sudah Di Tentukan
+                    </h5>
+                    <button class="btn btn-block btn-primary">
+                        Lihat Unit Kompetensi dan Lakukan Pembayaran
+                    </button>
                     <div class="box-body">
                         <div class='row'>
                             <div class='col-md-9'>
@@ -66,11 +67,11 @@
                                         <td><?php echo $jadwal->tuk ?></td>
                                         <td style="text-align:center" width="200px">
                                             <?php
-                                            echo anchor(site_url('jadwal/ubah_jadwal/' . $jadwal->no), '<i class="fa fa-calendar" aria-hidden="true"></i> Ajukan Perubahan Jadwal', 'class="btn btn-danger btn-sm"');
+                                            echo anchor(site_url('jadwal/read/' . $jadwal->no), '<i class="fa fa-eye" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
                                             echo '  ';
-                                            // echo anchor(site_url('jadwal/update/' . $jadwal->no), '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
-                                            // echo '  ';
-                                            // echo anchor(site_url('jadwal/delete/' . $jadwal->no), '<i class="fa fa-trash-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm" Delete', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"');
+                                            echo anchor(site_url('jadwal/update/' . $jadwal->no), '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
+                                            echo '  ';
+                                            echo anchor(site_url('jadwal/delete/' . $jadwal->no), '<i class="fa fa-trash-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm" Delete', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"');
                                             ?>
                                         </td>
                                     </tr>
