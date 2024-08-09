@@ -21,8 +21,26 @@
 				</tr>
 
 				<tr>
+					<th>No</th>
+					<th>Kode Unit Kompetensi</th>
+					<th>Judul Unit Kompetensi</th>
+				</tr>
+
+				<?php
+				$queryKompetensi = "SELECT * FROM `tbl_kompetensi_tahmud`";
+				$kompetensi = $this->db->query($queryKompetensi)->result_array();
+				?>
+				<?php foreach ($kompetensi as $kom) : ?>
+					<tr>
+						<td><?= $kom['id'] ?></td>
+						<td><?= $kom['kode_kompetensi'] ?></td>
+						<td><?= $kom['judul_kompetensi'] ?></td>
+					</tr>
+				<?php endforeach; ?>
+
+				<tr>
 					<td><a href="<?php echo site_url('pilih_skema') ?>" class="btn btn-default">Kembali</a></td>
-					<td><a href="<?php echo site_url('form_apl01') ?>" class="btn btn-success">Pilih skema dan isi form APL 01</a></td>
+					<td><a href="<?php echo site_url('formapl01') ?>" class="btn btn-success">Pilih skema dan isi form APL 01</a></td>
 				</tr>
 
 			</table>

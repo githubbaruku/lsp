@@ -5,26 +5,36 @@
 				<h3 class="box-title"><?php echo strtoupper($button) ?> DATA TBL_PILIH_SKEMA</h3>
 			</div>
 			<form action="<?php echo $action; ?>" method="post">
-			
+
 				<table class='table table-bordered'>
-	
+
 					<tr>
-						<td width='200'>Skema <?php echo form_error('skema') ?></td><td><input type="text" class="form-control" name="skema" id="skema" placeholder="Skema" value="<?php echo $skema; ?>" /></td>
+						<td width='200'>Skema <?php echo form_error('skema') ?></td>
+						<td><input type="text" class="form-control" name="skema" id="skema" placeholder="Skema" value="<?php echo $skema; ?>" /></td>
 					</tr>
-	
+
 					<tr>
-						<td width='200'>Biaya <?php echo form_error('biaya') ?></td><td><input type="text" class="form-control" name="biaya" id="biaya" placeholder="Biaya" value="<?php echo $biaya; ?>" /></td>
+						<td width='200'>Biaya <?php echo form_error('biaya') ?></td>
+						<td><input type="text" class="form-control" name="biaya" id="biaya" placeholder="Biaya" value="<?php echo $biaya; ?>" /></td>
 					</tr>
-	
+					<tr>
+						<td width='200'>Kode Unit Kompetensi <?php echo form_error('kode_skema') ?></td>
+						<td><input type="text" class="form-control" name="kode_skema" id="kode_skema" placeholder="Kode Skema" value="<?php echo $kode_skema; ?>" /></td>
+					</tr>
+					<tr>
+						<td width='200'>Judul Unit Kompetensi <?php echo form_error('unit_kompetensi') ?></td>
+						<td><input type="text" class="form-control" name="unit_kompetensi" id="unit_kompetensi" placeholder="Judul Unit Kompetensi" value="<?php echo $unit_kompetensi; ?>" /></td>
+					</tr>
+
 					<tr>
 						<td></td>
 						<td>
-							<input type="hidden" name="no" value="<?php echo $no; ?>" /> 
-							<button type="submit" class="btn btn-danger"><i class="fa fa-floppy-o"></i> <?php echo $button ?></button> 
+							<input type="hidden" name="no" value="<?php echo $no; ?>" />
+							<button type="submit" class="btn btn-danger"><i class="fa fa-floppy-o"></i> <?php echo $button ?></button>
 							<a href="<?php echo site_url('pilih_skema') ?>" class="btn btn-info"><i class="fa fa-sign-out"></i> Kembali</a>
 						</td>
 					</tr>
-	
+
 				</table>
 			</form>
 		</div>

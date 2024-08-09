@@ -3,7 +3,7 @@
 	<section class="content">
 		<div class="box box-warning box-solid">
 			<div class="box-header with-border">
-				<h3 class="box-title">DETAIL DATA TBL_FORM</h3>
+				<h3 class="box-title">DETAIL DATA TBL_FORMAPL01</h3>
 			</div>
 
 			<table class='table table-bordered'>
@@ -126,7 +126,7 @@
 
 				<tr>
 					<td></td>
-					<td><a href="<?php echo site_url('form') ?>" class="btn btn-default">Kembali</a></td>
+					<td><a href="<?php echo site_url('formapl01') ?>" class="btn btn-default">Kembali</a></td>
 				</tr>
 
 			</table>

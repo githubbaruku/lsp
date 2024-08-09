@@ -5,24 +5,24 @@
                 <div class="box box-warning box-solid">
 
                     <div class="box-header">
-                        <h3 class="box-title">KELOLA DATA TBL_FORM</h3>
+                        <h3 class="box-title">KELOLA DATA TBL_FORMAPL01</h3>
                     </div>
 
                     <div class="box-body">
                         <div class='row'>
                             <div class='col-md-9'>
                                 <div style="padding-bottom: 10px;"'>
-        <?php echo anchor(site_url('form/create'), '<i class="fa fa-wpforms" aria-hidden="true"></i> Tambah Data', 'class="btn btn-danger btn-sm"'); ?></div>
+        <?php echo anchor(site_url('formapl01/create'), '<i class="fa fa-wpforms" aria-hidden="true"></i> Tambah Data', 'class="btn btn-danger btn-sm"'); ?></div>
             </div>
             <div class=' col-md-3'>
-                                    <form action="<?php echo site_url('form/index'); ?>" class="form-inline" method="get">
+                                    <form action="<?php echo site_url('formapl01/index'); ?>" class="form-inline" method="get">
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="q" value="<?php echo $q; ?>">
                                             <span class="input-group-btn">
                                                 <?php
                                                 if ($q <> '') {
                                                 ?>
-                                                    <a href="<?php echo site_url('form'); ?>" class="btn btn-default">Reset</a>
+                                                    <a href="<?php echo site_url('formapl01'); ?>" class="btn btn-default">Reset</a>
                                                 <?php
                                                 }
                                                 ?>
@@ -74,41 +74,41 @@
                                     <th>Tanggal</th>
                                     <th>Action</th>
                                 </tr><?php
-                                        foreach ($form_data as $form) {
+                                        foreach ($formapl01_data as $formapl01) {
                                         ?>
                                     <tr>
                                         <td width="10px"><?php echo ++$start ?></td>
-                                        <td><?php echo $form->skema ?></td>
-                                        <td><?php echo $form->tuk ?></td>
-                                        <td><?php echo $form->nama_kampus ?></td>
-                                        <td><?php echo $form->nama_lengkap ?></td>
-                                        <td><?php echo $form->nik ?></td>
-                                        <td><?php echo $form->tempat_lahir ?></td>
-                                        <td><?php echo $form->tanggal_lahir ?></td>
-                                        <td><?php echo $form->jenis_kelamin ?></td>
-                                        <td><?php echo $form->kebangsaan ?></td>
-                                        <td><?php echo $form->email ?></td>
-                                        <td><?php echo $form->no_telepon ?></td>
-                                        <td><?php echo $form->pendidikan_terakhir ?></td>
-                                        <td><?php echo $form->alamat_rumah ?></td>
-                                        <td><?php echo $form->nama_pekerjaan ?></td>
-                                        <td><?php echo $form->nama_perusahaan ?></td>
-                                        <td><?php echo $form->jabatan ?></td>
-                                        <td><?php echo $form->alamat_perusahaan ?></td>
-                                        <td><?php echo $form->no_telepon_email ?></td>
-                                        <td><?php echo $form->fotokopi_ktp ?></td>
-                                        <td><?php echo $form->pas_foto ?></td>
-                                        <td><?php echo $form->sertifikat_pelatihan ?></td>
-                                        <td><?php echo $form->fotokopi_ijazah ?></td>
-                                        <td><?php echo $form->tanggal ?></td>
-                                        <td><?php echo $form->tanda_tangan ?></td>
+                                        <td><?php echo $formapl01->skema ?></td>
+                                        <td><?php echo $formapl01->tuk ?></td>
+                                        <td><?php echo $formapl01->nama_kampus ?></td>
+                                        <td><?php echo $formapl01->nama_lengkap ?></td>
+                                        <td><?php echo $formapl01->nik ?></td>
+                                        <td><?php echo $formapl01->tempat_lahir ?></td>
+                                        <td><?php echo $formapl01->tanggal_lahir ?></td>
+                                        <td><?php echo $formapl01->jenis_kelamin ?></td>
+                                        <td><?php echo $formapl01->kebangsaan ?></td>
+                                        <td><?php echo $formapl01->email ?></td>
+                                        <td><?php echo $formapl01->no_telepon ?></td>
+                                        <td><?php echo $formapl01->pendidikan_terakhir ?></td>
+                                        <td><?php echo $formapl01->alamat_rumah ?></td>
+                                        <td><?php echo $formapl01->nama_pekerjaan ?></td>
+                                        <td><?php echo $formapl01->nama_perusahaan ?></td>
+                                        <td><?php echo $formapl01->jabatan ?></td>
+                                        <td><?php echo $formapl01->alamat_perusahaan ?></td>
+                                        <td><?php echo $formapl01->no_telepon_email ?></td>
+                                        <td><?php echo $formapl01->fotokopi_ktp ?></td>
+                                        <td><?php echo $formapl01->pas_foto ?></td>
+                                        <td><?php echo $formapl01->sertifikat_pelatihan ?></td>
+                                        <td><?php echo $formapl01->fotokopi_ijazah ?></td>
+                                        <td><?php echo $formapl01->tanggal ?></td>
+                                        <td><?php echo $formapl01->tanda_tangan ?></td>
                                         <td style="text-align:center" width="200px">
                                             <?php
-                                            echo anchor(site_url('form/read/' . $form->id), '<i class="fa fa-eye" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
+                                            echo anchor(site_url('formapl01/read/' . $formapl01->id), '<i class="fa fa-eye" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
                                             echo '  ';
-                                            echo anchor(site_url('form/update/' . $form->id), '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
+                                            echo anchor(site_url('formapl01/update/' . $formapl01->id), '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
                                             echo '  ';
-                                            echo anchor(site_url('form/delete/' . $form->id), '<i class="fa fa-trash-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm" Delete', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"');
+                                            echo anchor(site_url('formapl01/delete/' . $formapl01->id), '<i class="fa fa-trash-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm" Delete', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"');
                                             ?>
                                         </td>
                                     </tr>

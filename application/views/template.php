@@ -114,7 +114,7 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 1.0.0
             </div>
-            <strong>Copyright &copy; 2024 LSP XYZ | made by STMIK Antar Bangsa College Students.
+            <strong>Copyright &copy; 2024 LSP Daarul Qur'an | made by STMIK Antar Bangsa College Students.
 
         </footer>
 

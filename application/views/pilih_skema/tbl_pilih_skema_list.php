@@ -13,7 +13,7 @@
                         <div class='row'>
                             <div class='col-md-9'>
                                 <div style="padding-bottom: 10px;"'>
-        <?php echo anchor(site_url('pilih_skema/create'), '<i class="fa fa-wpforms" aria-hidden="true"></i> Tambah Data', 'class="btn btn-danger btn-sm"'); ?></div>
+        <!-- <?php echo anchor(site_url('pilih_skema/create'), '<i class="fa fa-wpforms" aria-hidden="true"></i> Tambah Data', 'class="btn btn-danger btn-sm"'); ?></div> -->
             </div>
             <div class=' col-md-3'>
                                     <form action="<?php echo site_url('pilih_skema/index'); ?>" class="form-inline" method="get">
@@ -62,13 +62,13 @@
                                         <td><?php echo $pilih_skema->biaya ?></td>
                                         <td style="text-align:center" width="200px">
                                             <?php
-                                            echo anchor(site_url('pilih_skema/read/' . $pilih_skema->no), 'Pilih<i class="" aria-hidden="true"></i>', 'class="btn btn-success btn-sm"');
+                                            echo anchor(site_url('pilih_skema/read/' . $pilih_skema->no), 'Detail<i class="" aria-hidden="true"></i>', 'class="btn btn-success btn-sm"');
                                             echo '  ';
-                                            echo anchor(site_url('pilih_skema/read/' . $pilih_skema->no), '<i class="fa fa-eye" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
-                                            echo '  ';
-                                            echo anchor(site_url('pilih_skema/update/' . $pilih_skema->no), '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
-                                            echo '  ';
-                                            echo anchor(site_url('pilih_skema/delete/' . $pilih_skema->no), '<i class="fa fa-trash-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm" Delete', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"');
+                                            // echo anchor(site_url('pilih_skema/read/' . $pilih_skema->no), '<i class="fa fa-eye" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
+                                            // echo '  ';
+                                            // echo anchor(site_url('pilih_skema/update/' . $pilih_skema->no), '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
+                                            // echo '  ';
+                                            // echo anchor(site_url('pilih_skema/delete/' . $pilih_skema->no), '<i class="fa fa-trash-o" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm" Delete', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"');
                                             ?>
                                         </td>
                                     </tr>

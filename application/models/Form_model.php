@@ -12,6 +12,6 @@ class Form_model extends CI_Model
 
 	public function insert_form($data)
 	{
-		return $this->db->insert('tbl_form', $data);
+		return $this->db->insert('tbl_formapl01', $data);
 	}
 }

@@ -23,8 +23,17 @@
                     <label for="skema">Skema*</label>
                     <select class="form-control" id="skema" name="skema" required>
                         <option value="">- Pilih -</option>
-                        <option value="Skema 1">Skema 1</option>
-                        <option value="Skema 2">Skema 2</option>
+
+                        <?php
+                        // Mengambil data dari database tbl_formapl01
+                        $querySkema = "SELECT * FROM `tbl_skema`";
+                        $skema = $this->db->query($querySkema)->result_array();
+
+                        // Looping untuk menampilkan opsi skema
+                        foreach ($skema as $row) {
+                            echo '<option value="' . $row['id'] . '">' . $row['nama_skema'] . '</option>';
+                        }
+                        ?>
                     </select>
                 </div>
 
@@ -33,8 +42,12 @@
                     <label for="tuk">TUK*</label>
                     <select class="form-control" id="tuk" name="tuk" required>
                         <option value="">- Pilih -</option>
-                        <option value="TUK 1">TUK 1</option>
-                        <option value="TUK 2">TUK 2</option>
+                        <option value="STMIK Antar Bangsa">STMIK Antar Bangsa</option>
+                        <option value="Daqu Center">Daqu Center</option>
+                        <!-- <?php foreach ($skema as $row) {
+                                    echo '<option value="' . $row['id'] . '">' . $row['tuk'] . '</option>';
+                                }
+                                ?> -->
                     </select>
                 </div>
 
@@ -48,13 +61,13 @@
                 <!-- Nama Lengkap -->
                 <div class="form-group">
                     <label for="nama_lengkap">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" value="Dede Herman" required>
+                    <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" value="" required>
                 </div>
 
                 <!-- NIK -->
                 <div class="form-group">
                     <label for="nik">Nik (Nomor Induk Kependudukan)</label>
-                    <input type="text" class="form-control" id="nik" name="nik" value="3207181302860001" required>
+                    <input type="text" class="form-control" id="nik" name="nik" value="" required>
                 </div>
 
                 <!-- Tempat Lahir -->
@@ -127,8 +140,13 @@
                     <label for="nama_pekerjaan">Nama Pekerjaan</label>
                     <select class="form-control" id="nama_pekerjaan" name="nama_pekerjaan">
                         <option value="">- Pilih -</option>
-                        <option value="Pekerjaan 1">Pekerjaan 1</option>
-                        <option value="Pekerjaan 2">Pekerjaan 2</option>
+                        <option value="">Mahasiswa</option>
+                        <option value="">Pegawai Negeri</option>
+                        <option value="">Karyawan Swasta</option>
+                        <!-- <?php foreach ($skema as $row) {
+                                    echo '<option value="' . $row['id'] . '">' . $row['nama_pekerjaan'] . '</option>';
+                                } ?> -->
+                    </select>
                     </select>
                 </div>
 
@@ -186,12 +204,6 @@
                 <div class="form-group">
                     <label for="tanggal">Tanggal :</label>
                     <input type="date" class="form-control" id="tanggal" name="tanggal" required>
-                </div>
-
-                <!-- Tanda tangan -->
-                <div class="form-group">
-                    <label for="tanda_tangan">Klik Tombol Untuk Mengisi Tanda tangan</label>
-                    <input type="text" class="form-control" id="tanda_tangan" name="tanda_tangan" value="Dede Herman" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

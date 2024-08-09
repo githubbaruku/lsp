@@ -26,7 +26,7 @@ class Form extends CI_Controller
         // Add more rules as needed
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('form_view');
+            $this->load->view('form_apl01');
         } else {
             // Configure upload
             $config['upload_path'] = './uploads/';
@@ -73,7 +73,6 @@ class Form extends CI_Controller
                 'sertifikat_pelatihan' => $uploaded_files['sertifikat_pelatihan'],
                 'fotokopi_ijazah' => $uploaded_files['fotokopi_ijazah'],
                 'tanggal' => $this->input->post('tanggal'),
-                'tanda_tangan' => $this->input->post('tanda_tangan')
             );
 
             //  var_dump($data);
@@ -86,7 +85,7 @@ class Form extends CI_Controller
             } else {
                 $this->session->set_flashdata('pesan', 'Form APL 01 gagal disimpan');
             }
-            return redirect('form_apl01');
+            return redirect('jadwal');
         }
     }
 }

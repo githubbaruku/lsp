@@ -65,6 +65,39 @@ class Auth extends CI_Controller
         }
     }
 
+    // public function login()
+    // {
+    //     $this->load->library('form_validation');
+    //     $this->form_validation->set_rules('username', 'Username', 'required');
+    //     $this->form_validation->set_rules('password', 'Password', 'required');
+
+    //     if ($this->form_validation->run() == TRUE) {
+    //         $username = $this->input->post('username');
+    //         $password = $this->input->post('password');
+
+    //         // Check user in database
+    //         $user = $this->db->get_where('users', ['username' => $username, 'password' => md5($password)])->row();
+
+    //         if ($user) {
+    //             // Set session data
+    //             $this->session->set_userdata([
+    //                 'user_id' => $user->id,
+    //                 'username' => $user->username,
+    //                 'user_level' => $user->user_level_id,
+    //                 'logged_in' => TRUE
+    //             ]);
+
+    //             redirect('dashboard');
+    //         } else {
+    //             $this->session->set_flashdata('error', 'Invalid username or password');
+    //             redirect('auth/login');
+    //         }
+    //     } else {
+    //         $this->load->view('auth/login');
+    //     }
+    // }
+
+
     function cheklogin()
     {
         $email      = $this->input->post('email');
@@ -81,9 +114,13 @@ class Auth extends CI_Controller
             if (password_verify($password, $user['password'])) {
                 // retrive user data to session
                 $this->session->set_userdata($user);
-                redirect('welcome');
-            } else {
-                redirect('auth');
+                if ($user['id_user_level'] == 2) {
+                    redirect('welcome');
+                } else if ($user['id_user_level'] == 3) {
+                    redirect('profile_user');
+                } else {
+                    redirect('auth');
+                }
             }
         } else {
             $this->session->set_flashdata('status_login', 'email atau password yang anda input salah');
