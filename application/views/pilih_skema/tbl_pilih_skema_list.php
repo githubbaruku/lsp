@@ -4,6 +4,8 @@
             <div class="col-xs-12">
                 <div class="box box-warning box-solid">
 
+                    <h1>Pilih Skema Sertifikasi yang Ingin anda Ikuti
+                    </h1>
                     <div class="box-header">
                         <h3 class="box-title">Silahkan Pilih Skema Sertifikasi yang ingin anda Ikuti Untuk Uji Sertifikasi
                         </h3>
@@ -13,7 +15,8 @@
                         <div class='row'>
                             <div class='col-md-9'>
                                 <div style="padding-bottom: 10px;"'>
-        <!-- <?php echo anchor(site_url('pilih_skema/create'), '<i class="fa fa-wpforms" aria-hidden="true"></i> Tambah Data', 'class="btn btn-danger btn-sm"'); ?></div> -->
+        <!-- <?php echo anchor(site_url('pilih_skema/create'), '<i class="fa fa-wpforms" aria-hidden="true"></i> Tambah Data', 'class="btn btn-danger btn-sm"'); ?> -->
+    </div>
             </div>
             <div class=' col-md-3'>
                                     <form action="<?php echo site_url('pilih_skema/index'); ?>" class="form-inline" method="get">

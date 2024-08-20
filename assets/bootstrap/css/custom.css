@@ -1,0 +1,11 @@
+.list-unstyled>li {
+    margin-bottom: 10px;
+}
+
+.list-unstyled>li>ul>li {
+    margin-left: 20px;
+}
+
+.list-unstyled i {
+    margin-right: 8px;
+}

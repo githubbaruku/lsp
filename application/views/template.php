@@ -33,7 +33,8 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-
+    <!-- custom css -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/bootstrap/css/custom.css">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -91,9 +92,9 @@
                             </ul>
                         </li>
                         <!-- Control Sidebar Toggle Button -->
-                        <li>
-                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                        </li>
+                        <!-- <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li> -->
                     </ul>
                 </div>
             </nav>

@@ -40,7 +40,7 @@
 
 				<tr>
 					<td><a href="<?php echo site_url('pilih_skema') ?>" class="btn btn-default">Kembali</a></td>
-					<td><a href="<?php echo site_url('formapl01') ?>" class="btn btn-success">Pilih skema dan isi form APL 01</a></td>
+					<td><a href="<?php echo site_url('formapl01/create') ?>" class="btn btn-success">Pilih skema dan isi form APL 01</a></td>
 				</tr>
 
 			</table>

@@ -11,18 +11,23 @@
 
 	
 			<tr>
+				<td>Skema</td>
+				<td><?php echo $skema; ?></td>
+			</tr>
+	
+			<tr>
+				<td>Jumlah</td>
+				<td><?php echo $jumlah; ?></td>
+			</tr>
+	
+			<tr>
 				<td>Nama</td>
 				<td><?php echo $nama; ?></td>
 			</tr>
 	
 			<tr>
-				<td>Biaya</td>
-				<td><?php echo $biaya; ?></td>
-			</tr>
-	
-			<tr>
-				<td>Keterangan</td>
-				<td><?php echo $keterangan; ?></td>
+				<td>Email</td>
+				<td><?php echo $email; ?></td>
 			</tr>
 	
 			<tr>

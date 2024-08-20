@@ -101,7 +101,6 @@
                                         <td><?php echo $formapl01->sertifikat_pelatihan ?></td>
                                         <td><?php echo $formapl01->fotokopi_ijazah ?></td>
                                         <td><?php echo $formapl01->tanggal ?></td>
-                                        <td><?php echo $formapl01->tanda_tangan ?></td>
                                         <td style="text-align:center" width="200px">
                                             <?php
                                             echo anchor(site_url('formapl01/read/' . $formapl01->id), '<i class="fa fa-eye" aria-hidden="true"></i>', 'class="btn btn-danger btn-sm"');
